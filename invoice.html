@@ -10,12 +10,13 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <link href="/css/site.css" rel="stylesheet">
+    <link href="/css/invoice.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <header>
+    <header class="d-print-none">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">BS Forms</a>
@@ -44,16 +45,104 @@
         </nav>
     </header>
 
-    <main class="container">
-
+    <main class="px-5 container-fluid">
+        <div class="text-end d-print-none">
+            <button class="btn btn-dark mt-4 mb-1 me-4" type="button" onclick="window.print()">Print this page</button>
+        </div>
+        <div class="ps-3">
+            <div class="row row-cols-2 container-fluid align-items-center">
+                <div class="col col-12 col-sm-7">
+                    <img src="/img/IdeaFoundryLogo.svg" class="mb-sm-3 img-fluid" />
+                </div>
+                <div class="col col-12 col-sm-5">
+                    <p class="text-end"><b>Customer:</b> 4908</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 container-fluid">
+                <div class="col">
+                    <p class="m-0 my-md-2"><b>Date:</b> 05/12/2019</p>
+                </div>
+                <div class="col">
+                    <p class="m-0 my-md-2 text-md-end"><b>Invoice No:</b> 19005</p>
+                </div>
+            </div>
+            <div class="row row-cols-2 container-fluid">
+                <div class="col">
+                    <p class="m-0 mt-2"><b>Invoice To:</b></p>
+                    <address class="m-0">Mark Davis <br />
+                        3333 AI Davis Way <br />
+                        Las Vegas, NV 89118
+                    </address>
+                </div>
+                <div class="col">
+                    <p class="text-end m-0 mt-2"><b>Pay To:</b></p>
+                    <address class="text-end m-0 mb-3">Idea Foundry, Inc.<br />
+                        2705 N. Enterprise St <br />
+                        Kernersville, NC 27284
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="ps-3 pe-4 table-responsive row">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Rate</th>
+                        <th>QTY</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Design</td>
+                        <td>Website Design</td>
+                        <td class="text-end">$60.00</td>
+                        <td class="text-center">10</td>
+                        <td class="text-end">$600.00</td>
+                    </tr>
+                    <tr>
+                        <td>Development</td>
+                        <td>Website Development</td>
+                        <td class="text-end">$150.00</td>
+                        <td class="text-center">10</td>
+                        <td class="text-end">$1500.00</td>
+                    </tr>
+                    <tr>
+                        <td>Deployment</td>
+                        <td>Deployment and Hosting</td>
+                        <td class="text-end">$450.00</td>
+                        <td class="text-center">1</td>
+                        <td class="text-end">$450.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Sub Total:</td>
+                        <td class="text-end">$2,550.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Tax:</td>
+                        <td class="text-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Total:</td>
+                        <td class="text-end">$2,550.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <p class="ms-4"><b>NOTE:</b> This is a computer generated receipt and does not require physical signature.</p>
+        </div>
     </main>
 
-    <footer class="container-fluid bg-dark py-3 text-white">
+    <footer class="container-fluid bg-dark py-3 text-white d-print-none">
         <div class="row row-cols-1 row-cols-md-3">
 
-                <div class="col">Built by Glenn</div>
-                <div class="col text-md-center">Bootstrap Forms</div>
-                <div class="col text-md-end">glennschwartz42@gmail.com</div>
+            <div class="col">Built by Glenn</div>
+            <div class="col text-md-center">Bootstrap Forms</div>
+            <div class="col text-md-end">glennschwartz42@gmail.com</div>
 
         </div>
 

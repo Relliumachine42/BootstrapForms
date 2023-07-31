@@ -1,0 +1,11 @@
+.container {
+    border-bottom: solid 1px;
+    border-bottom-color: rgb(207, 207, 207);
+}
+
+.container-fluid {
+    border-bottom: solid 1px;
+    border-bottom-color: rgb(196, 192, 192);
+}
+
+.btn {}
